@@ -5,16 +5,9 @@
         </div>
         <nav>
             <ul>
-                <li>CHARACTERS</li>
-                <li>COMICS</li>
-                <li>MOVIES</li>
-                <li>TV</li>
-                <li>GAMES</li>
-                <li>COLLECTIBLES</li>
-                <li>VIDEOS</li>
-                <li>FANS</li>
-                <li>NEWS</li>
-                <li>SHOP</li>
+                <li v-for='(link, index) in links' v-bind:key=index>
+                    <a v-bind:href='link.url'>{{link.text}}</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -22,7 +15,63 @@
 
 <script>
 export default {
-    name: 'MyHeader'
+    name: 'MyHeader',
+    data() {
+        return {
+            links: [
+                {
+                    text: 'CHARACTERS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'COMICS',
+                    url: '#',
+                    active: true
+                },
+                {
+                    text: 'MOVIES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'TV',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'GAMES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'COLLECTIBLES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'VIDEOS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'FANS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'NEWS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'SHOP',
+                    url: '#',
+                    active: false
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -38,12 +87,18 @@ header {
         list-style: none;
         display: inline-block;
         padding: 0px 10px;
-        font-weight: bold;
 
-        &:hover {
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+
+            &:hover {
             color: #0282f9;
             cursor: pointer;
+            }
         }
     }
+
 }
 </style>
