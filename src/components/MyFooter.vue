@@ -57,10 +57,11 @@
                 <button>SIGN UP NOW!</button>
                 <ul>
                     <li>FOLLOW US</li>
-                    <li>cuaas</li>
-                    <li>cuaas</li>
-                    <li>cuaas</li>
-
+                    <li><img src="../assets/img/footer-facebook.png" alt="Facebook"></li>
+                    <li><img src="../assets/img/footer-twitter.png" alt="Facebook"></li>
+                    <li><img src="../assets/img/footer-youtube.png" alt="Facebook"></li>
+                    <li><img src="../assets/img/footer-pinterest.png" alt="Facebook"></li>
+                    <li><img src="../assets/img/footer-periscope.png" alt="Facebook"></li>
                 </ul>
             </div>
         </div>
@@ -111,13 +112,18 @@ footer {
             margin: auto;
             display: flex;
             justify-content: space-between;
-            padding: 40px;
+            padding: 30px;
 
             button {
-                border-color: #0282f9;
+                border: 1px solid #0282f9;
                 background-color: #303030;
                 color: #fff;
-                padding: 10px;
+                padding: 15px;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
             }
 
             ul li {
