@@ -53,7 +53,16 @@
             </div>
         </div>
         <div class="f_bottom">
-            <p>prova</p>
+            <div class="fb_container">
+                <button>SIGN UP NOW!</button>
+                <ul>
+                    <li>FOLLOW US</li>
+                    <li>cuaas</li>
+                    <li>cuaas</li>
+                    <li>cuaas</li>
+
+                </ul>
+            </div>
         </div>
     </footer>
 </template>
@@ -94,7 +103,33 @@ footer {
     }
 
     .f_bottom {
-        color: grey;
+        background-color: #303030;
+
+
+        .fb_container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+
+            button {
+                border-color: #0282f9;
+                background-color: #303030;
+                color: #fff;
+                padding: 10px;
+            }
+
+            ul li {
+                display: inline-block;
+                padding: 0px 10px;
+            }
+
+            ul li:first-child {
+                color: #0282f9;
+                font-weight: bold;
+            }
+        }
     }
 }
 </style>
