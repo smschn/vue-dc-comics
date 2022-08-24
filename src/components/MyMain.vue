@@ -1,5 +1,7 @@
 <template>
-    <div>test M</div>
+    <main>
+        --> content goes here
+    </main>
 </template>
 
 <script>
@@ -8,6 +10,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+main {
+    background-color: #1c1c1c;
+    height: 300px;
+    width: 100%;
+    color: white;
+}
 </style>
