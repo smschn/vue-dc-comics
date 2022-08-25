@@ -2,7 +2,7 @@
   <section id="footer_top">
     <div class="containerWidth">
         <div class="card" v-for="(card, index) in cards" v-bind:key="index">
-            <img v-bind:src="card.imgSrc" v-bind:alt="card.altText">
+            <img v-bind:src="require(`../assets/img/${card.imgSrc}`)" v-bind:alt="card.altText">
             <div>{{card.text}}</div>
         </div>
     </div>
@@ -16,27 +16,27 @@ export default {
         return {
             cards: [
                 {
-                    imgSrc: '../assets/img/buy-comics-digital-comics.png',
+                    imgSrc: 'buy-comics-digital-comics.png',
                     altText: 'Ditigal Comics',
                     text: 'DIGITAL COMICS'
                 },
                 {
-                    imgSrc: '../assets/img/buy-comics-merchandise.png',
+                    imgSrc: 'buy-comics-merchandise.png',
                     altText: 'Dc Merchandise',
                     text: 'DC MERCHANDISE'
                 },
                 {
-                    imgSrc: '../assets/img/buy-comics-subscriptions.png',
+                    imgSrc: 'buy-comics-subscriptions.png',
                     altText: 'Subscription',
                     text: 'SUBSCRIPTION'
                 },
                 {
-                    imgSrc: '../assets/img/buy-comics-shop-locator.png',
+                    imgSrc: 'buy-comics-shop-locator.png',
                     altText: 'Comic Shop Locator',
                     text: 'COMIC SHOP LOCATOR'
                 },
                 {
-                    imgSrc: '../assets/img/buy-dc-power-visa.svg',
+                    imgSrc: 'buy-dc-power-visa.svg',
                     altText: 'DC Power Visa',
                     text: 'DC POWER VISA'
                 }
