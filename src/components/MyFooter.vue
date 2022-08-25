@@ -37,6 +37,7 @@
                 <ul>
                     <li>FOLLOW US</li> <!-- creo dinamicamente le immagini social -->
                     <li v-for="(social, index) in socials" v-bind:key="index"><img v-bind:src="require(`../assets/img/footer-${social.imgSrc}`)" v-bind:alt="social.text"></li>
+                    <!-- riga sopra: aggiungo require con questa precisa sintassi altrimenti non mi trova le immagini -->
                 </ul>
             </div>
         </div>
