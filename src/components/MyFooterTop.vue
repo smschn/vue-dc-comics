@@ -62,6 +62,27 @@ export default {
 
         .card {
             flex-basis: calc(100% / 5);
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 0.8rem;
+
+            img {
+                max-width: 20%;
+                max-height: 70%;
+                margin-right: 15px;
+            }
+
+            &:hover {
+                font-size: 1.05rem;
+                text-decoration: underline;
+                cursor: pointer;
+
+                img {
+                    max-width: 25%;
+                    max-height: 75%;
+                }
+            }
         }
     }
 }
