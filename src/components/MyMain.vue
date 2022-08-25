@@ -1,8 +1,18 @@
 <template>
     <main>
         <div class="containerWidth">
-            --> content goes here
+            <div>prova</div>
+            <div>prova</div>
+            <div>prova</div>
+            <div>prova</div>
+            <div>prova</div>
+            <div>prova</div>
+            <div>prova</div>
+            <div>prova</div>
+            <div>prova</div>
+
         </div>
+        <div class="button">LOAD MORE</div>
     </main>
 </template>
 
@@ -15,15 +25,21 @@ export default {
 <style lang="scss">
 
 @import '../styles/container_width.scss';
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
 
 main {
     background-color: #1c1c1c;
-    height: 300px;
     width: 100%;
+    height: 800px; // da togliere alla fine?
     color: white;
 
-    div {
-       height: 100%;
+    .button {
+        @include button();
+        width: 150px;
+        position: relative;
+        left: 50%; // per centrarlo su asse X
+        transform: translateX(-50%); // per centrarlo su asse X
     }
 }
 
