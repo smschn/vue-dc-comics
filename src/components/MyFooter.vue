@@ -5,45 +5,24 @@
                 <div class="ft_menu">
                     <nav>
                         <h4>DC COMICS</h4>
-                        <ul>
-                            <li>Characters</li>
-                            <li>Comics</li>
-                            <li>Movies</li>
-                            <li>TV</li>
-                            <li>Games</li>
-                            <li>Videos</li>
-                            <li>News</li>
+                        <ul> <!-- creo dinamicamente il menu 'dc comics' -->
+                            <li v-for="(link, index) in links_dcComics" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
                         </ul>
                         <h4>SHOP</h4>
-                        <ul>
-                            <li>Shop DC</li>
-                            <li>Shop DC Collectibles</li>
+                        <ul> <!-- creo dinamicamente il menu 'shop' -->
+                            <li v-for="(link, index) in links_shop" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
                         </ul>
                     </nav>
                     <nav>
                         <h4>DC</h4>
-                        <ul>
-                            <li>Terms Of Use</li>
-                            <li>Privacy Policy</li>
-                            <li>Ad Choices</li>
-                            <li>Advertising</li>
-                            <li>Jobs</li>
-                            <li>Subscriptions</li>
-                            <li>Talent Workshops</li>
-                            <li>CPSC Certificates</li>
-                            <li>Ratings</li>
-                            <li>Shop Help</li>
-                            <li>Contact Us</li>
+                        <ul> <!-- creo dinamicamente il menu 'dc' -->
+                            <li v-for="(link, index) in links_dc" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
                         </ul>
                     </nav>
                     <nav>
                         <h4>SITES</h4>
-                        <ul>
-                            <li>DC</li>
-                            <li>MAD Magazine</li>
-                            <li>DC Kids</li>
-                            <li>DC Universe</li>
-                            <li>DC Power Visa</li>
+                        <ul> <!-- creo dinamicamente il menu 'sites' -->
+                            <li v-for="(link, index) in links_sites" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -56,12 +35,8 @@
             <div class="fb_container containerWidth">
                 <button>SIGN UP NOW!</button>
                 <ul>
-                    <li>FOLLOW US</li>
-                    <li><img src="../assets/img/footer-facebook.png" alt="Facebook"></li>
-                    <li><img src="../assets/img/footer-twitter.png" alt="Twitter"></li>
-                    <li><img src="../assets/img/footer-youtube.png" alt="Youtube"></li>
-                    <li><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></li>
-                    <li><img src="../assets/img/footer-periscope.png" alt="Periscope"></li>
+                    <li>FOLLOW US</li> <!-- creo dinamicamente le immagini social -->
+                    <li v-for="(social, index) in socials" v-bind:key="index"><img v-bind:src="require(`../assets/img/footer-${social.imgSrc}`)" v-bind:alt="social.text"></li>
                 </ul>
             </div>
         </div>
@@ -69,8 +44,152 @@
 </template>
 
 <script>
+
 export default {
-    name: 'MyFooter'
+
+    name: 'MyFooter',
+
+    data() {
+        return {
+            
+            // creo oggetti per creare dinamicamente le voci del menu
+
+            links_dcComics: [ 
+                {
+                    text: 'Characters',
+                    url: 'https://www.google.com'
+                },
+                {
+                    text: 'Comics',
+                    url: '#'
+                },
+                {
+                    text: 'Movies',
+                    url: '#'
+                },
+                {
+                    text: 'TV',
+                    url: '#'
+                },
+                {
+                    text: 'Games',
+                    url: '#'
+                },
+                {
+                    text: 'Videos',
+                    url: '#'
+                },
+                {
+                    text: 'News',
+                    url: '#'
+                }
+            ],
+
+            links_shop: [
+                {
+                    text: 'Shop DC',
+                    url: '#'
+                },
+                {
+                    text: 'Shop DC Collectibles',
+                    url: '#'
+                }
+            ],
+
+            links_dc: [
+                {
+                    text: 'Terms Of Use',
+                    url: '#'
+                },
+                {
+                    text: 'Privacy Policy',
+                    url: '#'
+                },
+                {
+                    text: 'Ad Choices',
+                    url: '#'
+                },
+                {
+                    text: 'Jobs',
+                    url: '#'
+                },
+                {
+                    text: 'Subscriptions',
+                    url: '#'
+                },
+                {
+                    text: 'Talent Workshops',
+                    url: '#'
+                },
+                {
+                    text: 'CPSC Certificates',
+                    url: '#'
+                },
+                {
+                    text: 'Ratings',
+                    url: '#'
+                },
+                {
+                    text: 'Shop Help',
+                    url: '#'
+                },
+                {
+                    text: 'Shop DC Collectibles',
+                    url: '#'
+                },
+                {
+                    text: 'Contact Us',
+                    url: '#'
+                }
+            ],
+
+            links_sites: [
+                {
+                    text: 'DC',
+                    url: '#'
+                },
+                {
+                    text: 'MAD Magazine',
+                    url: '#'
+                },
+                {
+                    text: 'DC Kids',
+                    url: '#'
+                },
+                {
+                    text: 'DC Universe',
+                    url: '#'
+                },
+                {
+                    text: 'DC Power Visa',
+                    url: '#'
+                },
+            ],
+
+            socials: [
+                {
+                    imgSrc: 'facebook.png',
+                    text: 'Facebook'
+                },
+                {
+                    imgSrc: 'twitter.png',
+                    text: 'Twitter'
+                },
+                {
+                    imgSrc: 'youtube.png',
+                    text: 'Youtube'
+                },
+                {
+                    imgSrc: 'pinterest.png',
+                    text: 'Pinterest'
+                },
+                {
+                    imgSrc: 'periscope.png',
+                    text: 'Periscope'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -111,8 +230,16 @@ footer {
 
                 li {
                     list-style: none;
-                    color: grey;
                     padding: 5px 0px;
+
+                    a {
+                        text-decoration: none;
+                        color: grey;
+
+                        &:hover {
+                            color: rgb(175, 175, 175);
+                        }
+                    }
                 }
             }
 

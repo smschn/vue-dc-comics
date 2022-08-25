@@ -3,7 +3,7 @@
         <div class="containerWidth">
             <div class="card_comics" v-for="(card, index) in cards" v-bind:key="index">
                 <div class="img_container">
-                    <img v-bind:src="card.thumb" alt="card.type">
+                    <img v-bind:src="card.thumb" v-bind:alt="card.type">
                 </div>
                 <h6>{{card.series.toUpperCase()}}</h6>
             </div>
