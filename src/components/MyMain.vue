@@ -1,14 +1,12 @@
 <template>
     <main>
         <div class="containerWidth">
-            
             <div class="card_comics" v-for="(card, index) in cards" v-bind:key="index">
                 <div class="img_container">
                     <img v-bind:src="card.thumb" alt="card.type">
                 </div>
                 <h6>{{card.series.toUpperCase()}}</h6>
             </div>
-
         </div>
         <div class="button">LOAD MORE</div>
     </main>
@@ -123,6 +121,10 @@ main {
                 width: 150px;
                 height: 150px;
                 overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                }
             }
 
             h6 {
