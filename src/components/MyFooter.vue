@@ -89,6 +89,7 @@ footer {
             height: 450px;
             display: flex;
             justify-content: space-between;
+            overflow: hidden; // nascondo la parte del logo che fuoriesce dal contenitore
 
             .ft_menu {
                 display: flex;
@@ -116,7 +117,8 @@ footer {
             }
 
             .ft_logobg {
-                overflow: hidden;
+                position: relative;
+                top: -60px;
             }
         }
     }
