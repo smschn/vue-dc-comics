@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="containerWidth">
         <div>
             <img src="../assets/img/dc-logo.png" alt="Logo">
         </div>
@@ -76,12 +76,15 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import '../styles/container_width.scss';
+@import '../styles/variables.scss';
+
 header {
-    width: 80%;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0px;
 
     li {
         list-style: none;
@@ -94,11 +97,13 @@ header {
             color: black;
 
             &:hover {
-            color: #0282f9;
+            color: $blueDC;
             cursor: pointer;
             }
         }
+
     }
 
 }
+
 </style>

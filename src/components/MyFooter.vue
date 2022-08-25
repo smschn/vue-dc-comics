@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="f_top">
-            <div class="ft_container">
+            <div class="ft_container containerWidth">
                 <div class="ft_menu">
                     <nav>
                         <h4>DC COMICS</h4>
@@ -53,15 +53,15 @@
             </div>
         </div>
         <div class="f_bottom">
-            <div class="fb_container">
+            <div class="fb_container containerWidth">
                 <button>SIGN UP NOW!</button>
                 <ul>
                     <li>FOLLOW US</li>
                     <li><img src="../assets/img/footer-facebook.png" alt="Facebook"></li>
-                    <li><img src="../assets/img/footer-twitter.png" alt="Facebook"></li>
-                    <li><img src="../assets/img/footer-youtube.png" alt="Facebook"></li>
-                    <li><img src="../assets/img/footer-pinterest.png" alt="Facebook"></li>
-                    <li><img src="../assets/img/footer-periscope.png" alt="Facebook"></li>
+                    <li><img src="../assets/img/footer-twitter.png" alt="Twitter"></li>
+                    <li><img src="../assets/img/footer-youtube.png" alt="Youtube"></li>
+                    <li><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></li>
+                    <li><img src="../assets/img/footer-periscope.png" alt="Periscope"></li>
                 </ul>
             </div>
         </div>
@@ -75,6 +75,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import '../styles/container_width.scss';
+@import '../styles/variables.scss';
+
 footer {
     color: white;
 
@@ -82,41 +86,53 @@ footer {
         background-image: url('../assets/img/footer-bg.jpg');
 
         .ft_container {
-            width: 80%;
-            margin: auto;
-            height: 400px;
+            height: 450px;
             display: flex;
             justify-content: space-between;
 
             .ft_menu {
                 display: flex;
+                padding: 50px 0px;
+
+                nav {
+                    margin: 0px 10px;
+                }
+
+                nav h4 {
+                    font-size: 1.2rem;
+                    padding-bottom: 15px;
+                }
+
+                nav:first-child ul {
+                    color: red;
+                    margin-bottom: 20px;
+                }
 
                 li {
                     list-style: none;
                     color: grey;
+                    padding: 5px 0px;
                 }
             }
 
             .ft_logobg {
                 overflow: hidden;
             }
-            }
+        }
     }
 
     .f_bottom {
-        background-color: #303030;
+        background-color: $bgFooter1;
 
 
         .fb_container {
-            width: 80%;
-            margin: auto;
             display: flex;
             justify-content: space-between;
-            padding: 30px;
+            padding: 30px 0px;
 
             button {
-                border: 1px solid #0282f9;
-                background-color: #303030;
+                border: 1px solid $blueDC;
+                background-color: $bgFooter1;
                 color: #fff;
                 padding: 15px;
             }
@@ -132,10 +148,11 @@ footer {
             }
 
             ul li:first-child {
-                color: #0282f9;
+                color: $blueDC;
                 font-weight: bold;
             }
         }
     }
 }
+
 </style>
