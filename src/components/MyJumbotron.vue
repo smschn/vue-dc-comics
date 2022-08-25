@@ -22,7 +22,7 @@ export default {
     height: 350px;
 
     .series_box {
-        @include button(); //utilizzo un mixin per le regole comuni con il bottone in fondo alla sezione <main>
+        @include button(); // uso un mixin per le regole comuni dei due bottoni presenti nel progetto
         width: 170px;
         position: relative;
         bottom: -330px;
