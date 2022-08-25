@@ -70,11 +70,11 @@ export default {
             img {
                 max-width: 20%;
                 max-height: 70%;
-                margin-right: 15px;
+                margin-right: 10px;
             }
 
             &:hover {
-                font-size: 1.05rem;
+                font-size: 1rem;
                 text-decoration: underline;
                 cursor: pointer;
 
