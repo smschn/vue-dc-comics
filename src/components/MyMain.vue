@@ -1,20 +1,24 @@
 <template>
     <main>
         <div class="containerWidth">
-            <div class="card_comics" v-for="(card, index) in cards" v-bind:key="index">
-                <div class="img_container">
-                    <img v-bind:src="card.thumb" v-bind:alt="card.type">
-                </div>
-                <h6>{{card.series.toUpperCase()}}</h6>
-            </div>
+            <MyCard v-for="(card, index) in cards" v-bind:key="index" :details="card" />
         </div>
         <div class="button">LOAD MORE</div>
     </main>
 </template>
 
 <script>
+
+import MyCard from './MyCard.vue';
+
 export default {
+
     name: 'MyMain',
+
+    components: {
+        MyCard,
+    },
+
     data() {
         return {
             cards: [
@@ -94,6 +98,7 @@ export default {
         }
     }
 }
+
 </script>
 
 <style lang="scss">
@@ -112,26 +117,6 @@ main {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
-        .card_comics {
-            flex-basis: calc(100% / 7);
-            margin: 10px;
-
-            .img_container { // per creare l'immagine quadrata e non rettangolare
-                width: 150px;
-                height: 150px;
-                overflow: hidden;
-
-                img {
-                    max-width: 100%;
-                }
-            }
-
-            h6 {
-                margin-top: 10px;
-                color: grey
-            }
-        }
     }
 
     .button {
